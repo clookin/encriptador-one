@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+  <title>Encriptador</title>
+</head>
+<body>
+  <header class="header-container">
+    <h1>Bienvenido a ONE Encrypt</h1>
+    <h2>Este es el mejor aplicativo para darle una proteccion inteligente a tus textos</h2>
+  </header>
+  <main class="main-container">
+    <section class="left-section">
+      <article class="input-article">
+        <textarea class="input-container" id="input-encriptador" type="text" placeholder="Ingresa texto aquí"></textarea>
+        <button class="copy-button" onclick={copiarTexto()}>Copiar Texto</button>
+      </article>
+      <article class="button-article">
+        <button class="button" id="button-encriptar button" onclick={encriptar()} >Encriptar</button>
+        <button class="button" id="button-desencriptar button" onclick={desencriptar()} >Desencriptar</button>
+      </article>
+    </section>
+    <section class="right-section">
+      <article class="information-article">
+        <h6>¿Cómo funciona?</h6>
+        <p>Este encriptador utiliza tecnicas avanzadas para identificar el contenido de tu texto, una vez termina su proceso de analisis agrega los codigos unicos para que tu mensaje cambie, el resultado sera un texto ilegible que podras compartir sin temor a que algun espia sepa su contenido</p>
+        <div class="anchor-container">
+          <a class="anchor" href="#">Codigo - GitHub</a>
+        </div>
+      </article>
+    </section>
+    <html>
+<div class="noise"></div>
+<div class="overlay"></div>
+<div class="terminal">
+  </div>
+  <div id="mensaje" class="mensaje"></div>
+</div>
+</html>
+  </main>
+<footer>
+
+</footer>
+  <script src="./index.js"></script>
+</body>
+</html>
