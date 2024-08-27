@@ -121,6 +121,7 @@ body{
     text-decoration: none;
     color: black;
     border-radius: .2rem;
+    z-index: 3;
     &:hover{
       background-color: rgba(245, 245, 220, 0.877);
     }
@@ -143,9 +144,9 @@ estilo del background tipo retro hacker
  */
   @import 'https://fonts.googleapis.com/css?family=Inconsolata';
 
-html {
+/* html {
   min-height: 100%;
-}
+} */
 
 body {
   box-sizing: border-box;
@@ -154,7 +155,6 @@ body {
   background-image: radial-gradient(#11581E, #041607), url("https://media.giphy.com/media/oEI9uBYSzLpBK/giphy.gif"); /* noise */
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: 'Inconsolata', Helvetica, sans-serif;
   font-size: 1.5rem;
   color: rgba(128, 255, 128, 0.8);
   text-shadow:
@@ -237,20 +237,6 @@ body {
 .output::before {
   content: "> ";
 }
-
-/* 
-.input {
-  color: rgba(192, 255, 192, 0.8);
-  text-shadow:
-      0 0 1px rgba(51, 255, 51, 0.4),
-      0 0 2px rgba(255, 255, 255, 0.8);
-}
-
-.input::before {
-  content: "$ ";
-} */
-
-
 a {
   color: #fff;
   text-decoration: none;
@@ -268,10 +254,16 @@ a::after {
 codigo mensaje modal 
 */
 .mensaje {
+  left: 1rem;
+  bottom: 1rem;
+  position: absolute;
   padding: 10px;
   margin-top: 10px;
   border-radius: 5px;
   display: none; 
+  z-index: 3;
+  width: auto;
+  max-width: 20rem;
 }
 .mensaje.error {
   background-color: #f8d7da;
@@ -282,4 +274,143 @@ codigo mensaje modal
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
+}
+.mensaje-instrucciones {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #94db7edc !important; 
+  color: #197501;
+  padding: 20px;
+  border: 1px solid #c1c1c1;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-weight: 600;
+}
+.cerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+@media ( width < 800px ) {
+
+  .header-container {
+    & h2 {
+      font-size: 1.2rem;
+      margin-inline: .9rem;
+    }
+  }
+  
+  .header-container {
+    & h1 {
+      padding-inline: 1rem;
+    }
+  }
+  .left-section {
+    
+    width: 70%;
+  }
+
+  .main-container {
+    width: 100vw;
+    margin-top: 2rem;
+  }
+
+  .left-section {
+    & .button-article {
+      width: 100%;
+      height: 15%;
+    }
+  }
+  
+  .left-section {
+    & .button-article {
+      & .button {
+        width: min-content;
+        padding-inline: .5rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .right-section {
+    width: 100%;
+    height: 70%;
+  }
+  .information-article {
+    height: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .right-section {
+    & p {
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
+
+@media ( width < 1000px ) {
+
+  .header-container {
+    & h2 {
+      font-size: 2rem;
+      margin-inline: 1.5rem;
+    }
+  }
+  
+  .header-container {
+    & h1 {
+      padding-inline: 1.5rem;
+    }
+  }
+  .left-section {
+    
+    width: 90%;
+  }
+
+  .main-container {
+    margin-top: 3.5rem;
+  }
+
+  .left-section {
+    & .button-article {
+      width: 100%;
+      height: 15%;
+    }
+  }
+  
+  .left-section {
+    & .button-article {
+      & .button {
+        width: min-content;
+        padding-inline: 1rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .right-section {
+    width: 100%;
+    height: 50%;
+  }
+
+
+  .right-section {
+    & p {
+      font-size: 1.4rem;
+    }
+  }
 }
