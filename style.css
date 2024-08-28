@@ -298,7 +298,7 @@ codigo mensaje modal
   font-size: 20px;
 }
 
-@media ( width < 700px ) {
+@media (max-width: 700px) {
   .main-container{
     height: 122vh;
     justify-content: space-evenly;
