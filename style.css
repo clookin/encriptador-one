@@ -375,7 +375,7 @@ codigo mensaje modal
   }
 }
 
-@media (min-width: 701px) and (max-width: 1500px) {
+@media (min-width: 701px) and (max-width: 900px) {
 
   .header-container {
     & h2 {
