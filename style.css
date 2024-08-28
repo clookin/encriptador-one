@@ -298,28 +298,42 @@ codigo mensaje modal
   font-size: 20px;
 }
 
-@media ( width < 800px ) {
-
+@media ( width < 700px ) {
+  .main-container{
+    height: 122vh;
+    justify-content: space-evenly;
+  }
   .header-container {
     & h2 {
       font-size: 1.2rem;
       margin-inline: .9rem;
     }
   }
-  
+  .mensaje{
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    width: 90%;
+    font-size: 1.4rem;
+  }
   .header-container {
     & h1 {
       padding-inline: 1rem;
     }
   }
   .left-section {
-    
     width: 70%;
+    height: 50vh;
   }
-
+  .input-article{
+    height: 40vh !important;
+  }
+  .input-container{
+    height: 40vh;
+  }
   .main-container {
     width: 100vw;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 
   .left-section {
@@ -338,10 +352,9 @@ codigo mensaje modal
       }
     }
   }
-
   .right-section {
     width: 100%;
-    height: 70%;
+    height: 40% !important;
   }
   .information-article {
     height: auto;
@@ -362,7 +375,7 @@ codigo mensaje modal
   }
 }
 
-@media ( width < 1000px ) {
+@media (min-width: 701px) and (max-width: 1500px) {
 
   .header-container {
     & h2 {
@@ -370,19 +383,25 @@ codigo mensaje modal
       margin-inline: 1.5rem;
     }
   }
-  
+  .mensaje{
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    width: 90%;
+    font-size: 1.4rem;
+  }
   .header-container {
     & h1 {
       padding-inline: 1.5rem;
     }
   }
   .left-section {
-    
+    height: 70vh;
     width: 90%;
   }
-
   .main-container {
-    margin-top: 3.5rem;
+    justify-content: space-evenly;
+    height: 110vh;
   }
 
   .left-section {
